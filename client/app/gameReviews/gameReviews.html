@@ -1,0 +1,61 @@
+<div class="col-sm-4 col-lg-8 col-md-8">
+      <div class="page-header">
+        <h3>
+          <a>
+            {{game.name}}
+          </a>
+        </h3>
+      </div>
+
+      <div class="well">
+
+        <div ng-repeat="comment in game.comments | orderBy:'-upvotes'">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span class="glyphicon glyphicon-thumbs-up"
+                              ng-click="incrementUpvotes(game, comment)"></span>
+                              {{comment.upvotes}} - by {{comment.author}}
+                            <span class="pull-right">10 days ago</span>
+                            <br/>
+                            <p>{{comment.body}}</p>
+                        </div>
+                    </div>
+                    <hr>
+        </div>
+                    
+        <form ng-submit="addComment(game)"
+        style="margin-top:30px;">
+        <h3>Add a new comment</h3>
+        <div class="form-group">
+          <input type="text"
+          class="form-control"
+          placeholder="Comment"
+          ng-model="comment.body"></input>
+        </div>
+        <div class="form-group">
+          <input type="text"
+          class="form-control"
+          placeholder="Author"
+          ng-model="comment.author"></input>
+        </div>
+        <button type="submit" class="btn btn-primary">Post</button>
+      </form>
+
+      <!--
+        <span class="glyphicon glyphicon-thumbs-up"
+          ng-click="incrementUpvotes(comment)"></span>
+        {{comment.upvotes}} - by {{comment.author}}
+        <span style="font-size:20px; margin-left:10px;">
+          {{comment.body}}
+        </span>
+      </div>
+
+
+
+-->
+
+
+                </div>
+
+
+                </div>

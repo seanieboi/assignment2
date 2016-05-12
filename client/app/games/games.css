@@ -1,0 +1,94 @@
+/*Products Widget*/
+
+
+
+.widget-products li>a:after {
+    content: "\f138";
+    font-style: normal;
+    font-weight: normal;
+    margin-top: 32px;
+    position: absolute;
+    right: 10px;
+    text-decoration: inherit;
+    top: 0;
+    color: #cccccc;
+}
+
+.widget-todo .name {
+    float: left;
+}
+.widget-todo>li {
+    border-bottom: 1px solid #ebebeb;
+    padding: 10px 5px;
+}
+.widget-todo {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.widget-products li .product>.warranty>i {
+    color: #f1c40f;
+}
+.widget-products li .product>.warranty {
+    display: block;
+    text-decoration: none;
+    width: 50%;
+    float: left;
+}
+.widget-products li .product>.price>i {
+    color: #2ecc71;
+}
+.widget-products li .product>.price {
+    display: block;
+    font-weight:bold;
+    text-decoration: none;
+    width: 80%;
+    float: left;
+}
+.widget-products li .product>.name {
+    display: block;
+    font-weight: 600;
+    font-size: large;
+    padding-bottom: 7px;
+}
+.widget-products li .product {
+    display: block;
+    margin-left: 90px;
+    margin-top: 19px;
+}
+.widget-products li .img {
+    display: block;
+    float: left;
+    text-align: center;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    margin-top: 7px;
+}
+
+.widget-products li {
+    border-bottom: 1px solid #ebebeb;
+}
+.widget-products {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.widget-users li {
+    border-bottom: 1px solid #ebebeb;
+    padding: 15px 0;
+    height: 96px;
+}
+
+
+.widget-users li>.img {
+    float: left;
+    margin-top: 8px;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.tabs-wrapper.tabs-no-header .tab-content {
+    padding: 0 20px 20px;
+}

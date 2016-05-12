@@ -1,0 +1,86 @@
+<!--<header class="hero-unit" id="banner">
+  <div class="container">
+    <h1>'Allo, 'Allo!</h1>
+    <p class="lead">Kick-start your next web app with Angular Fullstack</p>
+    <img src="assets/images/yeoman.png" alt="I'm Yeoman">
+  </div>
+</header>
+
+<div class="container">
+    <div class="col-sm-8 col-lg-8 col-md-8">
+      <h1 class="page-header">Features:</h1>
+      <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in $ctrl.awesomeThings">
+        <li><a href="#" uib-tooltip="{{thing.info}}">{{thing.name}}</a></li>
+      </ul>
+    </div>
+</div>
+-->
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+      <script src="bower_components/jquery/dist/jquery.min.js"></script>
+      <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<div class="container">
+  <div class="col-md-9">
+      <div class="row carousel-holder">  
+          <div class="col-md-12">
+              <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-slide="next">
+                  <ol class="carousel-indicators">
+                      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                  </ol>
+                  <div class="carousel-inner">
+                      <div class="item active">
+                          <a href="#/games/fifa-16">
+                              <img class="slide-image" src="assets/images/fifa-16-menu.jpg" alt="">
+                          </a>
+                      </div>
+                      <div class="item">
+                          <a href="#/games/need-for-speed">
+                              <img class="slide-image" src="assets/images/need-for-speed-menu-2.jpg" alt="">
+                          </a>
+                      </div>
+                      <div class="item">
+                          <a href="gameDetail/5724dc70f47237490d247f1b">
+                              <img class="slide-image" src="assets/images/black-ops-3-menu.jpg" alt="">
+                          </a>
+                      </div>
+                  </div>
+                  <span class="left carousel-control" data-target="#carousel-example-generic" data-slide="prev">
+                      <span class="glyphicon glyphicon-chevron-left"></span>
+                  </span>
+                  <span class="right carousel-control" data-target="#carousel-example-generic" data-slide="next">
+                      <span class="glyphicon glyphicon-chevron-right"></span>
+                  </span>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <h4>This years new Games:</h4>
+          <br>
+          <div ng-repeat="game in games | filter: greaterThan('releaseDate', '2015-10-01') | orderBy:orderProp">
+              <div class="col-sm-4 col-lg-4 col-md-4">
+                  <div class="thumbnail">
+                      <img ng-src="assets/images/{{game.menuImg}}" alt="">
+                      <div class="caption">
+                          <h4 class="pull-right">€ {{game.price}}</h4>
+                          <h4><a href="gameDetail/{{game._id}}">{{game.name}}</a>
+                          </h4>
+                          <p>{{game.snippet}}</p>
+                      </div>
+                      <div class="ratings">
+                          <!--<p class="pull-right">{{game.reviews}} reviews</p>-->
+                          <a href="gameDetail/{{game._id}}/reviews" class="pull-right">{{game.comments.length}} reviews</a>
+                          <p>
+                              <span class="glyphicon glyphicon-star"></span>
+                              <span class="glyphicon glyphicon-star"></span>
+                              <span class="glyphicon glyphicon-star"></span>
+                              <span class="glyphicon glyphicon-star"></span>
+                              <span class="glyphicon glyphicon-star"></span>
+                          </p>
+                      </div>
+                  </div>   
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
