@@ -23,7 +23,7 @@ if (config.seedDB) { require('./config/seed'); }
 // Setup server
 var nodemailer = require("nodemailer");
 var app = express();
-var transporter = nodemailer.createTransport('smtps://funtimesireland%40gmail.com:funtimes2k16@smtp.gmail.com');
+var transporter = nodemailer.createTransport('removedforGitHUB');
 app.get('/send',function(req,res){
 	var mailOptions={
    		to : req.query.to,
