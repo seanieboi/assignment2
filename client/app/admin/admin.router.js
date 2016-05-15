@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('assignment2App.admin')
+angular.module('funTimesApp.admin')
   .config(function($routeProvider) {
     $routeProvider
       .when('/admin', {

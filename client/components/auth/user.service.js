@@ -21,7 +21,7 @@ function UserResource($resource) {
   });
 }
 
-angular.module('assignment2App.auth')
+angular.module('funTimesApp.auth')
   .factory('User', UserResource);
 
 })();

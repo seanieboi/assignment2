@@ -111,7 +111,7 @@ export function destroy(req, res) {
             games.save(function (err) {
               if(err) { return handleError(res, err); }
               var last = _.last(games.comments)
-              if (last != undefined) {
+              if (last !== undefined) {
                  return res.json(200, last);
               } else {
                 return res.send(500,"Database error")

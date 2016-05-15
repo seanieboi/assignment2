@@ -2,7 +2,7 @@
 
 class NavbarController {
   //start-non-standard
-   menu = [{
+  menu = [{
     'title': 'Home',
     'link': '/'
   },
@@ -30,5 +30,5 @@ class NavbarController {
   }
 }
 
-angular.module('assignment2App')
+angular.module('funTimesApp')
   .controller('NavbarController', NavbarController);

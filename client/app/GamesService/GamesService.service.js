@@ -1,16 +1,16 @@
 'use strict';
 
-  angular.module('assignment2App').factory('GamesService', ['$http', function($http){
+  angular.module('funTimesApp').factory('GamesService', ['$http', function($http){
    var api = {
      getGames : function() {
            return $http.get('/api/games');
      },
-     // addPost : function(post) {
-     //      return $http.post('/api/posts',post)
-     // },
+      addGame : function(game) {
+           return $http.post('/api/games',game);
+      },
      addComment : function(game_id, comment) {
           return $http.post('/api/games/' + game_id + '/comments' ,
-                            comment)
+                            comment);
      },
      // upvotePost : function(post_id, new_upvote_count ) {
      //      return $http.post('/api/posts/' + post_id + '/upvotes', 

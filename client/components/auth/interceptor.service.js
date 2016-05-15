@@ -25,7 +25,7 @@ function authInterceptor($rootScope, $q, $cookies, $location, Util) {
   };
 }
 
-angular.module('assignment2App.auth')
+angular.module('funTimesApp.auth')
   .factory('authInterceptor', authInterceptor);
 
 })();

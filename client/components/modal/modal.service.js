@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('assignment2App')
+angular.module('funTimesApp')
   .factory('Modal', function($rootScope, $uibModal) {
     /**
      * Opens a modal

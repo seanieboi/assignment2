@@ -29,5 +29,5 @@ class LoginController {
   }
 }
 
-angular.module('assignment2App')
+angular.module('funTimesApp')
   .controller('LoginController', LoginController);

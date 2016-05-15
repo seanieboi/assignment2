@@ -1,0 +1,93 @@
+
+<div class="container">
+	<div class="col-md-9">
+	<script type="text/javascript" src="//api.filestackapi.com/filestack.js"></script>
+	   <h3>First upload images for the game:</h3>
+	        <ul>
+	        	<li>Click the pick file button and select the <b>main image</b></li>
+	        	<li>Copy the URL and insert it for <b>imageURL</b> in the form below</li>
+	        	<li>Do the same for the hmepage image</li>
+	        </ul>
+
+		<input type="filepicker" data-fp-apikey="" onchange="alert(event.fpfile.url)">
+		<br>
+
+	    <form name="addGameForm" novalidate ng-submit="addGame()"
+	        style="margin-top:30px;">
+	        <h4>Add a new Game</h4>
+	        <div class="form-group">
+	          <input type="text" name="title" 
+	            class="form-control" placeholder="Name" 
+	            ng-model="newGame.name" 
+	            ng-required ng-minlength="3" ng-maxlength="20"></input>
+	        </div>
+	        <div class="form-group">
+	          <input type="text" name="releaseDate" class="form-control" placeholder="Release Date"
+	            ng-model="newGame.releaseDate"></input>
+	        </div>
+	        <div class="form-group">
+	          <input type="text" name="imageUrl"
+	          class="form-control" placeholder="imageUrl"
+	          ng-model="newGame.imageUrl" ng-required> </input>
+	        </div>
+	        <div class="form-group">
+	          <input type="text" name="images"
+	          class="form-control" placeholder="images"
+	          ng-model="newGame.images" ng-required> </input>
+	        </div>
+	        <div class="form-group">
+	          <input type="text" name="snippet"
+	          class="form-control" placeholder="Snippet"
+	          ng-model="newGame.snippet" ng-required ng-minlength="3" ng-maxlength="100"> </input>
+	        </div>
+	        <div class="form-group">
+	          <input type="text" name="description"
+	          class="form-control" placeholder="description"
+	          ng-model="newGame.description" ng-required ng-minlength="120"> </input>
+	        </div>
+	        <div class="form-group">
+	          <input type="text" name="Certified"
+	          class="form-control" placeholder="certified"
+	          ng-model="newGame.certified" ng-required> </input>
+	        </div>
+	        <div class="form-group">
+	          <input type="text" name="Platform"
+	          class="form-control" placeholder="platform"
+	          ng-model="newGame.platform" ng-required> </input>
+	        </div>
+	        <div class="form-group">
+	          <input type="number" name="Price"
+	          class="form-control" placeholder="price"
+	          ng-model="newGame.price" ng-required> </input>
+	        </div>
+	        <div class="form-group">
+	          <input type="text" name="Brand"
+	          class="form-control" placeholder="brand"
+	          ng-model="newGame.brand" ng-required> </input>
+	        </div>
+	        <div class="form-group">
+	          <input type="number" name="ratings"
+	          class="form-control" placeholder="Ratings"
+	          ng-model="newGame.ratings" ng-required> </input>
+	        </div>
+	        <div class="form-group">
+	          <input type="text" name="Series"
+	          class="form-control" placeholder="series"
+	          ng-model="newGame.series" ng-required> </input>
+	        </div>
+	        <div class="form-group">
+	          <input type="text" name="Trailer"
+	          class="form-control" placeholder="trailer"
+	          ng-model="newGame.trailer" ng-required> </input>
+	        </div>
+	        <div class="form-group">
+	          <input type="number" name="players"
+	          class="form-control" placeholder="Players"
+	          ng-model="newGame.players" ng-required> </input>
+	        </div>
+	        <button type="submit" class="btn btn-primary"
+	            ng-disabled="addGameForm.$pristine || (addGameForm.$dirty && addGameForm.$invalid) ">
+	        Submit</button>
+	      </form>
+	</div>
+</div>

@@ -14,7 +14,7 @@
 	    <ul class="widget-products">
 	        <li ng-repeat="game in games | filter:{name: query } | orderBy:predicate:reverse">
 	           <span class="img">
-	           <img class="img-thumbnail" ng-src="assets/images/{{game.menuImg}}" alt="">
+	           <img class="img-thumbnail" ng-src="{{game.menuImg}}" alt="">
 	           </span>
 	           <span class="product clearfix">
 	           <span class="name">

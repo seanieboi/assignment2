@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('assignment2App')
+angular.module('funTimesApp')
   .directive('navbar', () => ({
     templateUrl: 'components/navbar/navbar.html',
     restrict: 'E',

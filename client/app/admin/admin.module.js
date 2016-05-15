@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('assignment2App.admin', [
-  'assignment2App.auth',
+angular.module('funTimesApp.admin', [
+  'funTimesApp.auth',
   'ngRoute'
 ]);

@@ -183,7 +183,7 @@ function AuthService($location, $http, $cookies, $q, appConfig, Util, User) {
   return Auth;
 }
 
-angular.module('assignment2App.auth')
+angular.module('funTimesApp.auth')
   .factory('Auth', AuthService);
 
 })();

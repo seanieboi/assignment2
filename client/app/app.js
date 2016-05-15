@@ -1,9 +1,9 @@
 'use strict';
 
-angular.module('assignment2App', [
-  'assignment2App.auth',
-  'assignment2App.admin',
-  'assignment2App.constants',
+angular.module('funTimesApp', [
+  'funTimesApp.auth',
+  'funTimesApp.admin',
+  'funTimesApp.constants',
   'ngCookies',
   'ngResource',
   'ngSanitize',
@@ -20,5 +20,3 @@ angular.module('assignment2App', [
 
     $locationProvider.html5Mode(true);
   });
-
-  

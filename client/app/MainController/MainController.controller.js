@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('assignment2App')
+angular.module('funTimesApp')
   .controller('MainControllerCtrl', ['$scope', 'GamesService',
       function($scope, GamesService) {
          GamesService.getGames().success(function(data) {

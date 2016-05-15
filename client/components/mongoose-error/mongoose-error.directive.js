@@ -3,7 +3,7 @@
 /**
  * Removes server error when user updates input
  */
-angular.module('assignment2App')
+angular.module('funTimesApp')
   .directive('mongooseError', function() {
     return {
       restrict: 'A',

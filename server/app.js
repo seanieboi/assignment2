@@ -23,7 +23,7 @@ if (config.seedDB) { require('./config/seed'); }
 // Setup server
 var nodemailer = require("nodemailer");
 var app = express();
-var transporter = nodemailer.createTransport('removedforGitHUB');
+var transporter = nodemailer.createTransport('smtps://testgmail.com:password@smtp.gmail.com');
 app.get('/send',function(req,res){
 	var mailOptions={
    		to : req.query.to,

@@ -3,7 +3,7 @@
 describe('Controller: GameReviewsControllerCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('assignment2App'));
+  beforeEach(module('funTimesApp'));
 
   var GameReviewsControllerCtrl, scope;
 

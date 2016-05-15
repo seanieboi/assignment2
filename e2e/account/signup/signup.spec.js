@@ -39,6 +39,15 @@ describe('Signup View', function() {
     expect(page.form.submit.getText()).toBe('Sign up');
   });
 
+  it('should include oauth buttons with correct classes applied', function() {
+    expect(page.form.oauthButtons.facebook.getText()).toBe('Connect with Facebook');
+    expect(page.form.oauthButtons.facebook.getAttribute('class')).toMatch('btn-block');
+    expect(page.form.oauthButtons.google.getText()).toBe('Connect with Google+');
+    expect(page.form.oauthButtons.google.getAttribute('class')).toMatch('btn-block');
+    expect(page.form.oauthButtons.twitter.getText()).toBe('Connect with Twitter');
+    expect(page.form.oauthButtons.twitter.getAttribute('class')).toMatch('btn-block');
+  });
+
   describe('with local auth', function() {
 
     beforeAll(function(done) {

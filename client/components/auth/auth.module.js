@@ -1,8 +1,8 @@
 'use strict';
 
-angular.module('assignment2App.auth', [
-  'assignment2App.constants',
-  'assignment2App.util',
+angular.module('funTimesApp.auth', [
+  'funTimesApp.constants',
+  'funTimesApp.util',
   'ngCookies',
   'ngRoute'
 ])

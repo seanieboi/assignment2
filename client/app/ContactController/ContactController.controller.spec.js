@@ -3,7 +3,7 @@
 describe('Controller: ContactControllerCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('assignment2App'));
+  beforeEach(module('funTimes.app'));
 
   var ContactControllerCtrl, scope;
 

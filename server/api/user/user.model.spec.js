@@ -55,6 +55,50 @@ describe('User Model', function() {
       user.email = undefined;
       return user.save().should.be.rejected;
     });
+
+    describe('given user provider is google', function() {
+      beforeEach(function() {
+        user.provider = 'google';
+      });
+
+      it('should succeed when saving without an email', function() {
+        user.email = null;
+        return user.save().should.be.fulfilled;
+      });
+    });
+
+    describe('given user provider is facebook', function() {
+      beforeEach(function() {
+        user.provider = 'facebook';
+      });
+
+      it('should succeed when saving without an email', function() {
+        user.email = null;
+        return user.save().should.be.fulfilled;
+      });
+    });
+
+    describe('given user provider is twitter', function() {
+      beforeEach(function() {
+        user.provider = 'twitter';
+      });
+
+      it('should succeed when saving without an email', function() {
+        user.email = null;
+        return user.save().should.be.fulfilled;
+      });
+    });
+
+    describe('given user provider is github', function() {
+      beforeEach(function() {
+        user.provider = 'github';
+      });
+
+      it('should succeed when saving without an email', function() {
+        user.email = null;
+        return user.save().should.be.fulfilled;
+      });
+    });
   });
 
   describe('#password', function() {
@@ -92,6 +136,50 @@ describe('User Model', function() {
           .then(function(u) {
             return u.authenticate('password');
           }).should.eventually.be.true;
+      });
+    });
+
+    describe('given user provider is google', function() {
+      beforeEach(function() {
+        user.provider = 'google';
+      });
+
+      it('should succeed when saving without a password', function() {
+        user.password = null;
+        return user.save().should.be.fulfilled;
+      });
+    });
+
+    describe('given user provider is facebook', function() {
+      beforeEach(function() {
+        user.provider = 'facebook';
+      });
+
+      it('should succeed when saving without a password', function() {
+        user.password = null;
+        return user.save().should.be.fulfilled;
+      });
+    });
+
+    describe('given user provider is twitter', function() {
+      beforeEach(function() {
+        user.provider = 'twitter';
+      });
+
+      it('should succeed when saving without a password', function() {
+        user.password = null;
+        return user.save().should.be.fulfilled;
+      });
+    });
+
+    describe('given user provider is github', function() {
+      beforeEach(function() {
+        user.provider = 'github';
+      });
+
+      it('should succeed when saving without a password', function() {
+        user.password = null;
+        return user.save().should.be.fulfilled;
       });
     });
   });

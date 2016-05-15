@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('assignment2App.util', []);
+angular.module('funTimesApp.util', []);

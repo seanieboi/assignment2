@@ -15,6 +15,7 @@ var GameSchema = new Schema({
     releaseDate: { type: String, required: true },
     imageUrl: { type: String, required: true },
     images: { type:String, required: false },
+    menuImg: { type: String, required: false },
     snippet: { type:String, required: true },
     description: { type: String, required: true },
     certified: { type: String, required: true },

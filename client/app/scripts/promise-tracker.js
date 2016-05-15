@@ -3,6 +3,7 @@
  * http://github.com/ajoslin/angular-promise-tracker
  * Created by Andy Joslin; Licensed under Public Domain
  */
+'use strict';
 
 (function() {
 

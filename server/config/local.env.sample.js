@@ -7,7 +7,16 @@
 
 module.exports = {
   DOMAIN:           'http://localhost:9000',
-  SESSION_SECRET:   'assignment2-secret',
+  SESSION_SECRET:   'funtimes-secret',
+
+  FACEBOOK_ID:      '',
+  FACEBOOK_SECRET:  '',
+
+  TWITTER_ID:       'app-id',
+  TWITTER_SECRET:   'secret',
+
+  GOOGLE_ID:        'app-id',
+  GOOGLE_SECRET:    'secret',
 
   // Control debug level for modules using visionmedia/debug
   DEBUG: ''

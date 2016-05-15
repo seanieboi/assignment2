@@ -3,7 +3,7 @@
 describe('Service: GamesService', function () {
 
   // load the service's module
-  beforeEach(module('assignment2App'));
+  beforeEach(module('funTimesApp'));
 
   // instantiate service
   var GamesService;

@@ -14,11 +14,14 @@
     <!-- build:css(client) app/vendor.css -->
       <!-- bower:css -->
       <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+      <link rel="stylesheet" href="bower_components/bootstrap-social/bootstrap-social.css" />
       <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css({.tmp,client}) app/app.css -->
       <link rel="stylesheet" href="app/app.css">
       <!-- injector:css -->
+      <link rel="stylesheet" href="app/about/about.css">
+      <link rel="stylesheet" href="app/addGame/addGame.css">
       <link rel="stylesheet" href="app/admin/admin.css">
       <link rel="stylesheet" href="app/app.css">
       <link rel="stylesheet" href="app/contact/contact.css">
@@ -28,31 +31,31 @@
       <link rel="stylesheet" href="app/main/main.css">
       <link rel="stylesheet" href="components/footer/footer.css">
       <link rel="stylesheet" href="components/modal/modal.css">
+      <link rel="stylesheet" href="components/oauth-buttons/oauth-buttons.css">
       <!-- endinjector -->
     <!-- endbuild -->
   </head>
-  <body ng-app="assignment2App">
+  <body ng-app="funTimesApp">
     <!--[if lt IE 7]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
     <navbar></navbar>
-        <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                <p class="lead">Welcome</p>
-                <div class="list-group">
-                    <a href="/settings" class="list-group-item">My Account</a>
-                    <a href="/signup" class="list-group-item">Register</a>
-                    <a href="#" class="list-group-item">Category 3</a>
-                </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+            <p class="lead">Welcome</p>
+            <div class="list-group">
+                <a href="/settings" class="list-group-item">My Account</a>
+                <a href="/signup" class="list-group-item">Register</a>
+                <a href="/about" class="list-group-item">About</a>
             </div>
-                <div ng-view></div>
-        </div>   
+        </div>
+        <div ng-view></div>
+    </div>   
     </div>
-    <!--<sidenavbar></sidenavbar>
-    <div ng-view=""></div>-->
+    <!--<div ng-view=""></div>-->
     <footer></footer>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -89,24 +92,28 @@
       <script src="app/admin/admin.module.js"></script>
       <script src="components/auth/auth.module.js"></script>
       <script src="components/util/util.module.js"></script>
-      <script src="app/gameReviews/gameReviews.js"></script>
+      <script src="app/gameDetailController/gameDetailController.controller.js"></script>
+      <script src="app/GamesService/GamesService.service.js"></script>
       <script src="app/MainController/MainController.controller.js"></script>
+      <script src="app/about/about.controller.js"></script>
+      <script src="app/about/about.js"></script>
       <script src="app/account/account.js"></script>
       <script src="app/account/login/login.controller.js"></script>
       <script src="app/account/settings/settings.controller.js"></script>
       <script src="app/account/signup/signup.controller.js"></script>
+      <script src="app/addGame/addGame.js"></script>
       <script src="app/admin/admin.controller.js"></script>
-      <script src="app/ContactController/ContactController.controller.js"></script>
+      <script src="app/AddGameController/AddGameController.controller.js"></script>
       <script src="app/admin/admin.router.js"></script>
       <script src="app/app.constant.js"></script>
       <script src="app/contact/contact.js"></script>
       <script src="app/gameDetail/gameDetail.js"></script>
-      <script src="app/gameDetailController/gameDetailController.controller.js"></script>
-      <script src="app/GameReviewsController/GameReviewsController.controller.js"></script>
+      <script src="app/ContactController/ContactController.controller.js"></script>
+      <script src="app/gameReviews/gameReviews.js"></script>
       <script src="app/games/games.js"></script>
       <script src="app/main/main.js"></script>
       <script src="app/scripts/promise-tracker.js"></script>
-      <script src="app/GamesController/GamesController.controller.js"></script>
+      <script src="app/GameReviewsController/GameReviewsController.controller.js"></script>
       <script src="components/auth/auth.service.js"></script>
       <script src="components/auth/interceptor.service.js"></script>
       <script src="components/auth/router.decorator.js"></script>
@@ -116,8 +123,9 @@
       <script src="components/mongoose-error/mongoose-error.directive.js"></script>
       <script src="components/navbar/navbar.controller.js"></script>
       <script src="components/navbar/navbar.directive.js"></script>
-      <script src="components/sidenavbar/sidenavbar.directive.js"></script>
-      <script src="app/GamesService/GamesService.service.js"></script>
+      <script src="components/oauth-buttons/oauth-buttons.controller.js"></script>
+      <script src="components/oauth-buttons/oauth-buttons.directive.js"></script>
+      <script src="app/GamesController/GamesController.controller.js"></script>
       <script src="components/util/util.service.js"></script>
       <!-- endinjector -->
     <!-- endbuild -->

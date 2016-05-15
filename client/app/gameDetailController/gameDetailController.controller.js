@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('assignment2App')
+angular.module('funTimesApp')
   .controller('gameDetailsCtrl', 
          ['$scope', '$location', '$routeParams', 'GamesService', 
          function($scope, $location, $routeParams, GamesService) {
@@ -18,7 +18,7 @@ angular.module('assignment2App')
       }]);
 
    //youtTube Player
-     angular.module('assignment2App')
+     angular.module('funTimesApp')
       .directive('youtube', function($window) {
       return {
         restrict: "E",
@@ -80,7 +80,7 @@ angular.module('assignment2App')
       };
     });
 
-    angular.module('assignment2App')
+    angular.module('funTimesApp')
       .controller("YouTubeCtrl", function($scope) {
       //initial settings
       $scope.yt = {

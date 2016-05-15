@@ -1,4 +1,4 @@
-// Generated on 2016-04-30 using generator-angular-fullstack 3.6.1
+// Generated on 2016-05-12 using generator-angular-fullstack 3.6.1
 'use strict';
 
 module.exports = function (grunt) {
@@ -244,6 +244,28 @@ module.exports = function (grunt) {
       }
     },
 
+    bowerInstall: {
+    target: {
+
+        // Point to the files that should be updated when
+        // you run `grunt bower-install`
+        src: [
+            'app/views/**/*.html',   // .html support...
+            'app/*.html',   // .html support...
+        ],
+
+        // Optional:
+        // ---------
+        cwd: '',
+        dependencies: true,
+        devDependencies: false,
+        exclude: [],
+        fileTypes: {},
+        ignorePath: '',
+        overrides: {}
+        }
+    },
+
     // Reads HTML for usemin blocks to enable smart builds that automatically
     // concat, minify and revision files. Creates configurations in memory so
     // additional tasks can operate on them
@@ -305,7 +327,7 @@ module.exports = function (grunt) {
     // `server/config/environment/shared.js`
     ngconstant: {
       options: {
-        name: 'assignment2App.constants',
+        name: 'funTimesApp.constants',
         dest: '<%= yeoman.client %>/app/app.constant.js',
         deps: [],
         wrap: true,
@@ -324,7 +346,7 @@ module.exports = function (grunt) {
     ngtemplates: {
       options: {
         // This should be the name of your apps angular module
-        module: 'assignment2App',
+        module: 'funTimesApp',
         htmlmin: {
           collapseBooleanAttributes: true,
           collapseWhitespace: true,
@@ -779,4 +801,5 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
+
 };

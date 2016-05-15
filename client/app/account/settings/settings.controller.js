@@ -25,5 +25,5 @@ class SettingsController {
   }
 }
 
-angular.module('assignment2App')
+angular.module('funTimesApp')
   .controller('SettingsController', SettingsController);

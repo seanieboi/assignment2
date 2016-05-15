@@ -1,7 +1,7 @@
 (function(angular, undefined) {
 'use strict';
 
-angular.module('assignment2App.constants', [])
+angular.module('funTimesApp.constants', [])
 
 .constant('appConfig', {userRoles:['guest','user','admin']})
 

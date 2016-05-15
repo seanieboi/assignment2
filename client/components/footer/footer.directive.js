@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('assignment2App')
+angular.module('funTimesApp')
   .directive('footer', function() {
     return {
       templateUrl: 'components/footer/footer.html',

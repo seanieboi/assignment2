@@ -2,8 +2,7 @@
   <div class="row">
     <div class="col-sm-9">
       <h1>Login</h1>
-      <p>Accounts are reset on server restart from <code>server/config/seed.js</code>. Default account is <code>test@example.com</code> / <code>test</code></p>
-      <p>Admin account is <code>admin@example.com</code> / <code>admin</code></p>
+      <p>Please enter your Email and Password or click Sign Up to Register</p>
     </div>
     <div class="col-sm-9">
       <form class="form" name="form" ng-submit="vm.login(form)" novalidate>
@@ -40,6 +39,12 @@
           </a>
         </div>
 
+        <hr/>
+        <div class="row">
+          <div class="col-sm-4 col-md-3">
+            <oauth-buttons classes="btn-block"></oauth-buttons>
+          </div>
+        </div>
       </form>
     </div>
   </div>

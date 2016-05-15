@@ -39,5 +39,5 @@ class SignupController {
   }
 }
 
-angular.module('assignment2App')
+angular.module('funTimesApp')
   .controller('SignupController', SignupController);

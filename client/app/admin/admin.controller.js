@@ -14,7 +14,7 @@ class AdminController {
   }
 }
 
-angular.module('assignment2App.admin')
+angular.module('funTimesApp.admin')
   .controller('AdminController', AdminController);
 
 })();

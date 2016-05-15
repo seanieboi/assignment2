@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('assignment2App')
+angular.module('funTimesApp')
   .config(function ($routeProvider) {
     $routeProvider
       .when('/contact', {
