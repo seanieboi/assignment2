@@ -117,6 +117,11 @@ Reviews page uses unique id from game details page, the controller is gameReview
 Contact us page uses ContactControllerCtrl, the route is /contact:
 ![][image9]
 
+<br>
+
+Add Game page uses AddGameControllerCtrl, the route is /addGame this is only available to users of type admin:
+![][image10]
+
 ###Routing.
 
 + /homepage - displays main page with carrasol and new releases (games released in 2016)
@@ -185,3 +190,4 @@ router.post('/:game_id/comments/:comment_id/upvotes', controller.update_comment_
 [image7]: ./support/gameDetails.png
 [image8]: ./support/reviews.png
 [image9]: ./support/contactUs.png
+[image10]: ./support/addGame.png
