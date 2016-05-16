@@ -2,6 +2,8 @@
 
 Name: Sean O'Connor
 
+Live URL: http://funtimesireland.herokuapp.com/
+
 ###Overview.
 
 The purpose of this application is to demo Angulars core functions as part of a college assignment. To do this I decided to create a video game application which allows the user to view games and create an account. The reason I choose this type of web app is that I have a great interest in video games and I find alot of the online stores don't have good clean designed stores. Also I found that most Irish online game stores are very expensive and don't give the user all the information required to make their purchase. therefore my objectives of the application were to allow the user to: 
@@ -26,6 +28,7 @@ The purpose of this application is to demo Angulars core functions as part of a 
  + Carosal to show user special offers etc..
  + View App on Mobile Device
  + Full validation on contact us form to help the user not make mistakes
+ + Sign up via email or by social media.
 
 ###Installation requirements.
 
@@ -65,7 +68,7 @@ Diagram of app's data model (see example below) AND/OR a sample of the test data
 
 <br>
 
-Sample json data for a game:
+Sample collection data for a game in MongoDB:
 
 ![][image2]
 
@@ -74,9 +77,9 @@ Sample json data for a game:
 ###Non-Trivial Issues.
 
 + Re-Sizing images - I found it hard to get th eimages to fit the carosal when they are all different sizes, to fix this I had to chnage the css to auto for width and 300px for length. 
-+ Displaying chnages - at first I didn't realise that I neede to clear the cache for the updates to display. 
 + Commas after fuction -  In the factory I didn't add a comma after the first function in the factory and got loads of controller issues. 
-+ Displaying YouTube videos - see below. 
++ Displaying YouTube videos - see below.
++ Uploading Images - This took way more time than expected and I would have liked to properly implemented image uploading but instead I went with the 3rd party app called Filestack.  
 
 ###App Design.
 
@@ -86,32 +89,32 @@ A simple diagram showing the app's component design, in particular controllers a
 
 ###UI Design.
 
-Homepage view uses gameListCtrl controller, route is /homepage:
+Homepage view uses MainControllerCtrl controller, route is /:
 ![][image4]
 
 <br>
 
-About page uses aboutCtrl, route is /route:
+About page uses AboutComponent, I didn't bother creating a controller as there is only static content route is /about:
 ![][image5]
 
 <br>
 
-Games page uses allGamesCtrl controller, route is /games:
+Games page uses GamesControllerCtrl controller, route is /games:
 ![][image6]
 
 <br>
 
-Game details page uses unique id from games page, the controller is gameDetailsCtrl, route is /games/gamesId:
+Game details page uses unique id from games page, the controller is gameDetailsCtrl, route is /gameDetail/games_Id:
 ![][image7]
 
 <br>
 
-Reviews page uses unique id from game details page, the controller is gameReviewCtrl, route is /games/gameId/reviewsgamesId:
+Reviews page uses unique id from game details page, the controller is gameReviewCtrl, route is /gameDetail/game_Id/reviews
 ![][image8]
 
 <br>
 
-Contact us page uses contactUsCtrl, the route is /contact:
+Contact us page uses ContactControllerCtrl, the route is /contact:
 ![][image9]
 
 ###Routing.
@@ -119,8 +122,8 @@ Contact us page uses contactUsCtrl, the route is /contact:
 + /homepage - displays main page with carrasol and new releases (games released in 2016)
 + /about - gives details of the app 
 + /games - lists all available games and allows the user to sort them by name or release date or filter by name
-+ /games/:gameId - displays details for a specific game
-+ /games/:gameId/reviews - displays reviews for the selected game
++ /gameDetails/:game_Id - displays details for a specific game
++ /gameDetails/:game_Id/reviews - displays reviews for the selected game
 + /contact - displays a contact us form with full validation (not connected to back end)
 + /login - allows user to log in to view their account
 + /myaccount - only available after the user logs in with valid credentials
@@ -161,6 +164,8 @@ router.post('/:game_id/comments/:comment_id/upvotes', controller.update_comment_
 + ajoslin.promise-tracker - This is a 3rd party javascript file that allows me to do dynamic form validation for my contact us form. 
 + Responsive Design - The app is optimised for mobile, tablet and desktop. Where needed I used the correct angular divs to make the likes of the videos responsive. 
 + Filestack Integration - Filestack is used to store the images associated with the games. 
++ Full Contact Us Form - The contact form has full validation and sends the email (see below for more on sending emails)
++ Live hosting on Heroku
 
 ###Independent learning.
 + Modals - I ran out of time before i had a chance to implement any modals (modals are pop up pages with information). I looked at implementing them as a single partial or embeded in another partial
@@ -169,6 +174,7 @@ router.post('/:game_id/comments/:comment_id/upvotes', controller.update_comment_
 + Yoeman - Using Yoeman saved a lot of time in getting the project set up and adding user authentication. 
 + Uploading images - I spent a considerable amount of time trying to implement a 3rd party image uplopader. I learned a lot about the front end and the back end ways of implementing this. 
 + Sending Emails - I wanted to fully implement the contact us form so that when the user complets the form they will receive a confirmation email and I will recieve the completed form. 
++ How to host a mean stack app - I wanted to get my app online so i looked into the best way to host for free. Heroku has Yeoman support so I used that and it made the build and deploy process very simple. 
 
 [image1]: ./support/model.png
 [image2]: ./support/gameJsonData.png
